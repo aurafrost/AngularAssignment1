@@ -1,0 +1,49 @@
+<p></p>
+<div>
+  <table border=1>
+    <!-- <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Street</th>
+      <th>Suite</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Company</th>
+      <th>Posts</th>
+    </tr> -->
+  <tr *ngFor="let i of res">
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.username}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.address.street}}</td>
+    <td>{{i.address.suite}}</td>
+    <td>{{i.address.city}}</td>
+    <td>{{i.address.zipcode}}</td>
+    <td>{{i.phone}}</td>
+    <td>{{i.website}}</td>
+    <td>{{i.company.name}}</td>
+    <td><button (click)='showPosts($event)' value={{i.id}}>Posts</button></td></tr>
+  </table>
+</div>
+<div>
+    <table border=1>
+      <!-- <tr>
+        <th>UserID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr> -->
+    <tr *ngFor="let i of res1">
+      <td>{{i.userId}}</td>
+      <td>{{i.id}}</td>
+      <td>{{i.title}}</td>
+      <td>{{i.body}}</td>
+      </tr>
+    </table>
+    <button (click)='removePosts($event)'>Clear Posts</button>
+  </div>
